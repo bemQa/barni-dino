@@ -56,6 +56,9 @@ $(document).ready(function () {
     if(window.innerWidth < 1000) {
         $('.products-list').scrollbar();
     }
+    $('.my-codes-list').scrollbar();
+    $('.my-figures-list').scrollbar();
+    $('.tooltip-products').scrollbar();
 
     function maskInit() {
         $(".phone-mask").inputmask({
@@ -193,43 +196,58 @@ $(document).ready(function () {
     }
     openAccordion();
 
-    // анимации барниметр
-    $(".cute-side").mouseover(function() {
-        $(".cool").removeClass('active');
-        $(".cute").addClass('active');
-    });
-    $(".cool-side").mouseover(function() {
-        $(".cute").removeClass('active');
-        $(".cool").addClass('active');
-    });
-    $(".cute-side, .cool-side").mouseleave(function() {
-        $(".cool, .cute").removeClass('active');
-    });
-    // клики барниметр
-    $(".cute-side").click(function() {
-        OpenPopup('cute');
-    });
-    $(".cool-side").click(function() {
-        OpenPopup('cool');
+    $('.tab-trigger').click(function(){
+        $('.tab-trigger').removeClass('active');
+        var tab = $(this).data('tab');
+        $('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-item').removeClass('active');
+        $('.tab-item.' + tab).addClass('active');
     });
 
-    if($('.barnidance-prizes-slider').length) {
-        $('.barnidance-prizes-slider').slick({
-            dots: false,
-            arrow: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-    }
+    $('.tooltip-link').click(function(e) {
+        e.preventDefault();
+        $(this).parent().next().addClass('active');
+    });
+
+    $('.close-tooltip').click(function(e) {
+        e.preventDefault();
+        $(this).parent().removeClass('active');
+    });
+
+    $('.btn-number').click(function(e) {
+        var type = $(this).attr('data-type');
+        var field = $(this).attr('data-field');
+        var input = $(this).parent().find('input[name ='+field+']');
+        var min = input.attr('min');
+        var max = input.attr('max');
+        min = parseInt(min);
+        max = parseInt(max);
+        var currentVal;
+        var value = input.val();
+        if (type == 'minus') {
+            if (value > min) {
+                currentVal = parseInt(value) - 1;
+                input.val(currentVal).change();
+            }
+        }
+        if (type == 'plus') {
+            if (value < max) {
+                currentVal = parseInt(value) + 1;
+                input.val(currentVal).change();
+            }
+        }
+    });
+    $('.input-number').change(function() {
+        var min = $(this).attr('min');
+        var max = $(this).attr('max');
+        var val = $(this).val();
+        var name = $(this).parent().find('.input-number').attr('name');
+        if (val == min) {
+            $(this).parent().find(".btn-number[data-type='minus'][data-field='" + name + "']").attr('disabled', 'true');
+        } else $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled');
+        if (val == max) {
+            $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").attr('disabled', 'true');
+        } else $(this).parent().find(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
+    });
 });

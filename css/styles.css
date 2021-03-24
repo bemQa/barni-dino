@@ -1790,12 +1790,20 @@ table td:nth-child(3) {
     height: calc(100% - 440px);
 }
 
+.my-address.success + .yellow-bg {
+    height: calc(100% - 370px);
+}
+
 .my-address {
     position: relative;
     width: 610px;
     min-height: 352px;
     margin: 70px auto 40px;
     padding: 17px 15px 0;
+}
+
+.my-address.success {
+    min-height: 270px;
 }
 
 .my-address::before {
@@ -3749,10 +3757,18 @@ table td:nth-child(3) {
     .my-address + .yellow-bg {
         height: calc(100% - 730px);
     }
+
+    .my-address.success + .yellow-bg {
+        height: calc(100% - 470px);
+    }
     
     .my-address {
         width: 100%;
         min-height: 520px;
+    }
+
+    .my-address.success {
+        min-height: 240px;
     }
 
     .my-address::before {

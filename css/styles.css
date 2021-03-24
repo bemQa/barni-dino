@@ -2772,38 +2772,43 @@ table td:nth-child(3) {
     color: #2FBCE7;
 }
 
-.error-page {
-    position: relative;
-    min-height: 650px;
-    padding: 80px 0 140px;
+.error404 {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: 0;
+    width: 620px;
+    height: 495px;
+    margin: auto;
+    background: url(../img/404.png) center no-repeat;
+    background-size: contain;
     z-index: 1;
 }
 
-.error-title {
-    font-weight: bold;
-    font-size: 288px;
-    line-height: 1;
-    letter-spacing: 1px;
-    text-align: center;
-    color: #fff;
-}
-
-.error-desc {
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 32px;
-    text-align: center;
-    letter-spacing: 1px;
-    color: #fff;
-    margin-bottom: 35px;
+.error500 {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: 0;
+    width: 620px;
+    height: 495px;
+    margin: auto;
+    background: url(../img/500.png) center no-repeat;
+    background-size: contain;
+    z-index: 1;
 }
 
 .error-text {
-    font-size: 21px;
-    line-height: 1.2;
+    position: relative;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
     text-align: center;
-    letter-spacing: 1px;
-    color: #fff;
+    text-transform: uppercase;
+    color: #2FBBE5;
+    margin-bottom: 20px;
+    padding-top: 500px;
+    z-index: 1;
 }
 
 .cookies-page {
@@ -3474,31 +3479,24 @@ table td:nth-child(3) {
         margin: 10px 0;
     }
 
-    .error-page {
-        min-height: 470px;
+    .error-page .yellow-bg {
+        bottom: -650px;
     }
 
-    .error-title {
-        font-size: 160px;
-        line-height: 1;
-    }
-
-    .error-desc {
-        font-size: 18px;
-        line-height: 21px;
-    }
-
-    .error-text {
-        font-size: 18px;
-    }
-
-    .error-desc + .btn-wrapper {
-        margin-top: 30px;
+    .error404,
+    .error500 {
+        left: -200px;
+        right: -85px;
+        width: 490px;
+        height: 391px;
     }
 
     .error-text {
-        font-size: 16px;
-        line-height: 18px;
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto 20px;
+        font-size: 24px;
+        padding-top: 420px;
     }
 }
 

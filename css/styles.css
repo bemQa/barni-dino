@@ -2256,12 +2256,12 @@ table td:nth-child(3) {
     background-size: 520px;
 }
 
-.popup-figure .popup__wrap,
-.popup-figure .popup__inner {
+.figure-popup .popup__wrap,
+.figure-popup .popup__inner {
     max-width: 840px;
 }
 
-.popup-figure .popup__inner {
+.figure-popup .popup__inner {
     padding-top: 66px;
 }
 
@@ -2306,7 +2306,7 @@ table td:nth-child(3) {
 }
 
 .popup-figure {
-    margin: 10px auto;
+    margin: 10px auto 40px;
 }
 
 .popup-figure-img {
@@ -3454,7 +3454,7 @@ table td:nth-child(3) {
         align-items: center;
         justify-content: flex-start;
         position: fixed;
-        top: -700px;
+        top: -100%;
         left: 0;
         right: 0;
         max-width: 100%;
@@ -3731,120 +3731,117 @@ table td:nth-child(3) {
         text-align: center;
     }
 
-    .profile-container {
-        flex-direction: column;
-        margin-bottom: 50px;
-    }
-
-    .profile-col {
-        -ms-align-items: center;
-        align-items: center;
-        max-width: 300px;
-        width: 100%;
-        padding: 20px 35px;
-        margin: auto;
-        background: #fff;
-        border-radius: 20px;
-    }
-
-    .coins-col {
-        padding: 10px 25px;
-        margin-top: 15px;
-        background: #1770C9;
-        color: #fff;
-    }
-
     .profile-name {
         font-size: 21px;
         line-height: 24px;
-        text-align: center;
-        color: #2EC5F4;
     }
 
-    .profile-contact-wrapper {
+    .tabs {
         flex-direction: column;
-        -ms-align-items: center;
-        align-items: center;
     }
 
-    .profile-mail {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .tab {
+        width: 377px;
+        height: 75px;
+        font-size: 28px;
     }
 
-    .reg-card-block {
-        padding-left: 75px;
-    }
-
-    .lk-title {
-        font-size: 24px;
+    .my-address + .yellow-bg {
+        height: calc(100% - 730px);
     }
     
-    .checks-wrapper {
-        max-width: 320px;
-        max-height: 480px;
-        margin: 15px auto 30px;
+    .my-address {
+        width: 100%;
+        min-height: 520px;
     }
 
-    .check {
-        max-width: 300px;
-        padding: 25px 17px 30px;
+    .my-address::before {
+        width: 610px;
+        height: 700px;
+        left: -200px;
+        right: -200px;
+        background: url(../img/products-bg-mob.png) center 0 no-repeat;
+        background-size: 100% 3000px;
     }
 
-    .check-announce {
-        max-width: 250px;
-    }
-
-    .check-preview {
-        margin-bottom: 25px;
-    }
-
-    .check-info {
+    .my-address-form .input-double {
         flex-direction: column;
-        max-width: 200px;
-    }
-
-    .check-info-col {
-        display: flex;
-        max-width: 100%;
-    }
-
-    .check-info-col.status {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-
-    .check-info-col.date {
-        max-width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .check-info-col.prize {
-        max-width: 100%;
-    }
-
-    .check-info-label {
-        width: 35px;
-        margin-right: 10px;
         margin-bottom: 0;
-        line-height: 20px;
     }
 
-    .lk-wrapper {
-        -ms-align-items: center;
-        align-items: center;
-    }
-
-    .data-wrapper {
+    .reg-code-form {
         flex-direction: column;
-        -ms-align-items: center;
-        align-items: center;
     }
 
-    .draw-wrapper {
+    .reg-code-form input {
         margin-bottom: 20px;
+    }
+
+    .my-figure-wrapper {
+        padding: 20px 10px 30px;
+    }
+
+    .my-figure,
+    .my-figure-fake {
+        margin: 15px auto;
+    }
+
+    .figure-popup {
+        padding-top: 75px;
+    }
+
+    .popup-figure {
+        max-width: 150px;
+    }
+
+    .my-dino-ar-block {
+        margin-bottom: 0;
+    }
+
+    .my-dino-ar {
+        margin: 15px auto;
+    }
+
+    .my-dino-ar:nth-child(2) {
+        margin-bottom: 350px;
+    }
+
+    .tooltip {
+        top: 0;
+        left: -50px;
+        right: -50px;
+        margin: auto;
+    }
+
+    .lk-page .galustyan-quote {
+        position: absolute;
+        top: 950px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .lk-page .galustyan-quote::before {
+        left: -600px;
+        right: -600px;
+        width: 1067px;
+        height: 278px;
+        background: url(../img/lk-quote-bg-mob.png) center 0 no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .lk-page .quote {
+        left: 35px;
+    }
+
+    .lk-page .galustyan-quote-text {
+        max-width: 285px;
+        min-height: auto;
+        margin: 0 auto 20px;
+    }
+
+    .lk-page .galustyan-quote-text br {
+        display: none;
     }
 
     .main-block {

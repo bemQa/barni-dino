@@ -2438,6 +2438,8 @@ table td:nth-child(3) {
     background: url(../img/kv.png) center 0 no-repeat;
     background-size: 1568px;
     z-index: 1;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .steps-block {
@@ -2562,6 +2564,8 @@ table td:nth-child(3) {
     margin: 25px auto 30px;
     background: url(../img/how-to.png) center no-repeat;
     background-size: contain;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .how-to-remark {
@@ -2732,6 +2736,40 @@ table td:nth-child(3) {
     text-align: center;
     text-transform: uppercase;
     color: #DB1C8B;
+}
+
+.figures-out {
+    position: relative;
+    max-width: 740px;
+    width: 100%;
+    margin: 40px auto 100px;
+    padding: 50px 80px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.figures-out::after {
+    content: '';
+    position: absolute;
+    top: -37px;
+    right: -52px;
+    width: 208px;
+    height: 359px;
+    background: url(../img/ar-dino.png) center no-repeat;
+    background-size: contain;
+}
+
+.figures-out-text {
+    max-width: 510px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.figures-out-text span {
+    color: #2FBCE7;
 }
 
 .error-page {
@@ -3289,7 +3327,115 @@ table td:nth-child(3) {
         display: none;
     }
 
-    
+    .main-page {
+        padding-top: 380px;
+        padding-bottom: 0;
+    }
+
+    .kv {
+        top: -30px;
+        left: -300px;
+        right: -300px;
+        width: 675px;
+        height: 647px;
+        background: url(../img/kv-mob.png) center 0 no-repeat;
+        background-size: 675px;
+    }
+
+    .steps-block {
+        margin-bottom: 45px;
+    }
+
+    .steps-block::before {
+        height: 1600px;
+    }
+
+    .steps {
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
+        padding-top: 215px;
+    }
+
+    .step.step1 {
+        margin-top: 0;
+    }
+
+    .step.step3 {
+        margin-top: 0;
+    }
+
+    .main-btn {
+        max-width: 300px;
+        font-size: 18px;
+    }
+
+    .how-to-block {
+        padding: 60px 0 40px;
+    }
+
+    .how-to-block::before {
+        background: url(../img/how-to-bg-mob.png) center no-repeat;
+        background-size: 1951px 100%;
+    }
+
+    .how-to-block .page-title {
+        max-width: 300px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .how-to {
+        width: 407px;
+        height: 1858px;
+        margin: 35px auto;
+        background: url(../img/how-to-mob.png) center 0 no-repeat;
+        background-size: contain;
+    }
+
+    .figures-steps {
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
+    }
+
+    .main-figures-block .page-title {
+        max-width: 300px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .figures-step {
+        max-width: 300px;
+        margin: 0 auto 30px;
+    }
+
+    .figures-step:not(.step4)::after {
+        display: none;
+    }
+
+    .main-figures {
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
+    }
+
+    .figures-out {
+        margin-bottom: 150px;
+        padding: 40px 15px 230px;
+    }
+
+    .figures-out::after {
+        top: auto;
+        bottom: -150px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .figures-out-text {
+        text-align: center;
+    }
 
     .main-cookie-h1 {
         font-size: 30px;
@@ -3347,8 +3493,16 @@ table td:nth-child(3) {
     }
 }
 
-@media (max-width: 370px) {
-    
+@media (max-width: 375px) {
+    .how-to {
+        width: 360px;
+        height: 1650px;
+    }
+
+    .how-to-remark {
+        font-size: 9px;
+        padding: 0 15px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -3360,5 +3514,10 @@ table td:nth-child(3) {
         top: -25px;
         width: 340px;
         background-size: 340px;
+    }
+
+    .how-to {
+        width: 320px;
+        height: 1470px;
     }
 }

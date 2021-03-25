@@ -334,10 +334,10 @@ footer .container {
 
     .plug-block {
         width: 100%;
-        min-height: 516px;
+        min-height: 516rem;
         margin: auto;
         background: url(../img/plug-mob.jpg) center 0 no-repeat #A2E2FF;
-        background-size: 321px;
+        background-size: 321rem;
     }
 
     .footer-announce {

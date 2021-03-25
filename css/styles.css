@@ -917,6 +917,11 @@ footer {
     margin: 0 auto 20px;
 }
 
+.input-field + .popup__desc {
+    font-weight: normal;
+    font-size: 12px;
+}
+
 .popup__text {
     font-size: 14px;
     line-height: 1.2;

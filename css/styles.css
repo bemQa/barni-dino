@@ -2128,6 +2128,7 @@ table td:nth-child(3) {
 
 .my-dino-ar {
     position: relative;
+    display: block;
     width: 245px;
     height: 222px;
     margin: 15px;

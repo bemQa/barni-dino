@@ -59,6 +59,7 @@ $(document).ready(function () {
     $('.my-codes-list').scrollbar();
     $('.my-figures-list').scrollbar();
     $('.tooltip-products').scrollbar();
+    $('.how-to-tooltip-scroll').scrollbar();
 
     function maskInit() {
         $(".phone-mask").inputmask({
@@ -200,9 +201,14 @@ $(document).ready(function () {
         $('.tab-item.' + tab).addClass('active');
     });
 
-    $('.tooltip-link').click(function(e) {
+    $('.tooltip-link').not('.how-to-tooltip-link').click(function(e) {
         e.preventDefault();
         $(this).parent().next().addClass('active');
+    });
+
+    $('.how-to-tooltip-link').click(function(e) {
+        e.preventDefault();
+        $(this).next().addClass('active');
     });
 
     $('.close-tooltip').click(function(e) {

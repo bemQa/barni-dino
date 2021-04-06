@@ -2205,13 +2205,14 @@ table td:nth-child(3) {
 }
 
 .close-tooltip {
-    position: absolute;
+    position: absolute !important;
     top: 15px;
     right: 15px;
     width: 18px;
     height: 18px;
     background: url(../img/close-popup.svg) center no-repeat;
     background-size: contain;
+    z-index: 1;
 }
 
 .tooltip-products {
@@ -2224,6 +2225,48 @@ table td:nth-child(3) {
 
 .tooltip-products .products-item {
     margin: 15px auto;
+}
+
+.how-to-tooltip-link {
+    position: absolute !important;
+    top: 216px;
+    left: -500px;
+    right: 0;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    background: url(../img/how-to-icon.svg) center no-repeat;
+    background-size: contain;
+}
+
+.how-to-tooltip {
+    position: absolute !important;
+    top: 240px;
+    left: -150px;
+    right: 0;
+    margin: auto;
+    padding: 15px 0px 20px 15px;
+}
+
+.how-to-tooltip-scroll {
+    max-height: 155px;
+}
+
+.how-to-tooltip-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.how-to-tooltip-text {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.how-to-tooltip-text span {
+    font-weight: bold;
+    color: #DB1C8B;
 }
 
 .lk-page .galustyan-quote {
@@ -2871,6 +2914,18 @@ table td:nth-child(3) {
         width: 1000px;
         height: 377px;
     }
+
+    .how-to-tooltip-link {
+        top: 185px;
+        left: -370px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .how-to-tooltip {
+        top: 200px;
+        left: -20px;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -3304,6 +3359,16 @@ table td:nth-child(3) {
         margin: auto;
     }
 
+    .how-to-tooltip-link {
+        top: 360px;
+        left: 0;
+        right: -305px;
+    }
+
+    .how-to-tooltip {
+        top: 385px;
+    }
+
     .lk-page .galustyan-quote {
         position: absolute;
         top: 950px;
@@ -3531,6 +3596,17 @@ table td:nth-child(3) {
     }
 }
 
+@media (max-width: 360px) {
+    .how-to-tooltip-link {
+        top: 345px;
+        right: -275px;
+    }
+
+    .how-to-tooltip {
+        top: 370px;
+    }
+}
+
 @media (max-width: 320px) {
     .galustyan-quote-text {
         font-size: 12px;
@@ -3545,5 +3621,18 @@ table td:nth-child(3) {
     .how-to {
         width: 320px;
         height: 1470px;
+    }
+
+    .how-to-tooltip-link {
+        top: 333px;
+        right: -250px;
+    }
+
+    .how-to-tooltip {
+        top: 350px;
+    }
+
+    .how-to-tooltip.active {
+        transform: scale(.9) ;
     }
 }

@@ -2138,6 +2138,10 @@ table td:nth-child(3) {
     background-size: 100%;
 }
 
+.my-dino-ar.qr {
+    padding: 0;
+}
+
 .my-dino-ar.dino1 {
     background: url(../img/lk-dino1.png) center 0 no-repeat;
     background-size: 100%;
@@ -2166,6 +2170,11 @@ table td:nth-child(3) {
     text-transform: uppercase;
     color: #fff;
     transform: rotate(-7deg);
+}
+
+a.my-dino-ar-title {
+    display: block;
+    padding: 145px 15px 25px 5px;
 }
 
 .my-dino-ar-text {
@@ -2197,6 +2206,11 @@ table td:nth-child(3) {
     pointer-events: none;
 }
 
+.qr .tooltip {
+    height: auto;
+    padding: 15px 10px;
+}
+
 .tooltip.active {
     opacity: 1;
     transform: scale(1);
@@ -2213,6 +2227,30 @@ table td:nth-child(3) {
     background: url(../img/close-popup.svg) center no-repeat;
     background-size: contain;
     z-index: 1;
+}
+
+.tooltip-qr-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2FBBE5;
+    margin-bottom: 15px;
+}
+
+.tooltip-qr-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tooltip-qr {
+    max-width: 180px;
+    width: 100%;
+    margin: auto;
 }
 
 .tooltip-products {

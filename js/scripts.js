@@ -211,6 +211,13 @@ $(document).ready(function () {
         $(this).next().addClass('active');
     });
 
+    if($(window).innerWidth() > 1000) {
+        $('.qr .my-dino-ar-title').click(function(e) {
+            e.preventDefault();
+            $(this).next().addClass('active');
+        });
+    }
+
     $('.close-tooltip').click(function(e) {
         e.preventDefault();
         $(this).parent().removeClass('active');

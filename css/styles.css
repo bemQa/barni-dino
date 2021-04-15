@@ -3030,13 +3030,13 @@ a.my-dino-ar-title {
         align-items: center;
         justify-content: flex-start;
         position: fixed;
-        top: -100%;
+        top: -101vh;
         left: 0;
         right: 0;
         max-width: 100%;
         width: 100%;
         /*min-height: 470px;*/
-        height: 100%;
+        height: 100vh;
         transition: all .2s linear;
         background: #A1E2FF;
         padding: 100px 0 50px;

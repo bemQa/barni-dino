@@ -3030,9 +3030,9 @@ a.my-dino-ar-title {
         align-items: center;
         justify-content: flex-start;
         position: fixed;
-        top: -101vh;
+        top: 0;
         left: 0;
-        right: 0;
+        right: -100%;
         max-width: 100%;
         width: 100%;
         /*min-height: 470px;*/
@@ -3060,7 +3060,7 @@ a.my-dino-ar-title {
     }
 
     .menu-links.active {
-        top: 0;
+        right: 0;
     }
 
     .menu-links a {
@@ -3672,5 +3672,9 @@ a.my-dino-ar-title {
 
     .how-to-tooltip.active {
         transform: scale(.9) ;
+    }
+
+    .menu-links a {
+    	padding: 20px 0;
     }
 }

@@ -223,6 +223,11 @@ $(document).ready(function () {
         $(this).parent().removeClass('active');
     });
 
+    $('.close-tooltip-banner').on('click', function (e) {
+        e.preventDefault();
+        $(this).parent().fadeOut();
+    });
+
     $('.btn-number').click(function(e) {
         var type = $(this).attr('data-type');
         var field = $(this).attr('data-field');

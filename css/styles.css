@@ -659,7 +659,7 @@ header {
 }
 
 .menu-links {
-    max-width: 780px;
+    max-width: 850px;
     width: 100%;
     height: 100px;
     margin-left: auto;
@@ -700,7 +700,7 @@ header {
 
 .menu-links .login-link {
     padding-left: 15px;
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 .menu-links .login-link::before {
@@ -725,7 +725,7 @@ header {
 }
 
 footer {
-    font-family: 'OfficinaSans'
+    font-family: 'OfficinaSans';
     flex: 0 0 auto;
     min-height: 310px;
     background: #fff;
@@ -3077,6 +3077,109 @@ a.my-dino-ar-title {
     border-radius: 26px;
 }
 
+@media (min-width: 1000px) {
+    .header-lenta .menu-links a {
+        color: #fff;
+    }
+
+    .header-lenta .menu-links .menu-link.active {
+        border: 1px solid #fff;
+    }
+
+    .header-lenta .menu-links .login-link::before {
+        background: url(../img/profile-icon-white.svg) center no-repeat;
+        background-size: contain;
+    }
+}
+
+.footer-lenta {
+    min-height: 140px;
+}
+
+.lenta-page {
+    padding: 668px 0 0;
+    min-height: 872px;
+}
+
+.lenta-page::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1110px;
+    background: url(../img/lenta/bg.jpg) center 0 no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.lenta-kv {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    right: -500px;
+    margin: auto;
+    width: 1420px;
+    height: 798px;
+    background: url(../img/lenta/kv.png) center no-repeat;
+    background-size: contain;
+}
+
+.lenta-rules-block {
+    position: relative;
+    padding: 60px 10px 20px;
+}
+
+.lenta-rules-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -500px;
+    right: -500px;
+    margin: auto;
+    min-width: 1920px;
+    width: 100%;
+    height: 411px;
+    background: #FFD52A;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.lenta-rules-block * {
+    position: relative;
+}
+
+.lenta-rules-title {
+    font-weight: bold;
+    font-size: 37px;
+    line-height: 1.1;
+    text-align: center;
+    color: #2B398B;
+    margin-bottom: 10px;
+}
+
+.lenta-rules-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1060px;
+    width: 100%;
+    margin: auto;
+}
+
+.lenta-card {
+    width: 124px;
+    margin-right: 20px;
+}
+
+.lenta-info {
+    max-width: 911px;
+    font-size: 10px;
+    line-height: 11px;
+    color: #000;
+}
+
 @media (max-width: 1366px) {
     .how-to {
         width: 1000px;
@@ -3112,6 +3215,22 @@ a.my-dino-ar-title {
 
     .products-item {
         margin: 15px 0;
+    }
+
+    .lenta-kv {
+        width: 1200px;
+    }
+
+    .lenta-rules-title {
+        font-size: 35px;
+    }
+
+    .lenta-rules-wrapper {
+        max-width: 1000px;
+    }
+
+    .lenta-info {
+        max-width: 856px;
     }
 }
 
@@ -3781,6 +3900,73 @@ a.my-dino-ar-title {
         align-items: center;
         margin-bottom: 22px;
     }
+
+    .header-lenta .burger {
+        background: url(../img/menu-white.svg) center no-repeat;
+        background-size: 29px;
+    }
+
+    .header-lenta .burger.active {
+        background: url(../img/menu-close.svg) center no-repeat;
+        background-size: 25px;
+    }
+
+    .lenta-page {
+        padding: 710px 0 0;
+    }
+
+    .lenta-page::before {
+        top: -84px;
+        height: 911px;
+        background: url(../img/lenta/bg-mob.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    .lenta-kv {
+        top: 40px;
+        width: 414px;
+        height: 793px;
+        background: url(../img/lenta/kv-mob.png) center no-repeat;
+        background-size: contain;
+    }
+
+    .lenta-rules-block {
+        padding: 30px 10px 30px;
+    }
+
+    .lenta-rules-block::before {
+        left: -1000px;
+        right: -1000px;
+        height: 800px;
+    }
+
+    .lenta-rules-title {
+        font-size: 34px;
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .lenta-rules-wrapper {
+        max-width: 350px;
+    }
+
+    .lenta-card {
+        width: 119px;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+
+    .lenta-info {
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .lenta-card ~ .lenta-info {
+        max-width: 202px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -3803,6 +3989,11 @@ a.my-dino-ar-title {
 
     .how-to-tooltip {
         top: 370px;
+    }
+
+    .lenta-kv,
+    .lenta-rules-block {
+        transform: scale(.9);
     }
 }
 
@@ -3837,5 +4028,20 @@ a.my-dino-ar-title {
 
     .menu-links a {
     	padding: 20px 0;
+    }
+
+    .lenta-rules-title {
+        font-size: 30px;
+    }
+
+    .lenta-card {
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    .lenta-info {
+        font-size: 9px;
+        line-height: 10px;
     }
 }

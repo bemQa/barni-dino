@@ -2951,11 +2951,13 @@ a.my-dino-ar-title {
     position: fixed;
     top: 200px;
     right: 0;
-    width: 274px;
-    height: 270px;
-    background: url(../img/perekrestok-banner/banner-mini.png) center no-repeat;
+    width: 272px;
+    height: 272px;
+    background: url(../img/banner-mini.png) center no-repeat;
     background-size: contain;
     z-index: 2;
+    image-rendering: optimizequality;
+    image-rendering: -webkit-optimize-contrast;
 }
 
 .close-tooltip-banner {

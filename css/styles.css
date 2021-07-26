@@ -3182,6 +3182,38 @@ a.my-dino-ar-title {
     color: #000;
 }
 
+.tooltip-banner2 {
+    top: 180px;
+    width: 295px;
+    height: 373px;
+    background: url(../img/banner2-mini.png) center no-repeat;
+    background-size: contain;
+}
+
+.tooltip-banner2 + .tooltip-banner {
+    top: 540px;
+}
+
+.banner2-popup {
+    padding-top: 0;
+}
+
+.banner2-popup .popup__wrap {
+    max-width: 1114px;
+    background: none;
+}
+
+.banner2-popup .close-popup {
+    top: 205px;
+}
+
+.banner2 {
+    max-width: 1114px;
+    height: 796px;
+    background: url(../img/banner2.png) center no-repeat;
+    background-size: contain;
+}
+
 @media (max-width: 1366px) {
     .how-to {
         width: 1000px;
@@ -3969,6 +4001,22 @@ a.my-dino-ar-title {
     .lenta-card ~ .lenta-info {
         max-width: 202px;
     }
+
+    .banner2-popup .popup__wrap {
+        max-width: 360px;
+    }
+
+    .banner2-popup .close-popup {
+        top: 75px;
+        right: 20px;
+    }
+
+    .banner2 {
+        max-width: 360px;
+        height: 774px;
+        background: url(../img/banner2-mob.png) center no-repeat;
+        background-size: contain;
+    }
 }
 
 @media (max-width: 375px) {
@@ -3996,6 +4044,10 @@ a.my-dino-ar-title {
     .lenta-kv,
     .lenta-rules-block {
         transform: scale(.9);
+    }
+
+    .banner2-popup .close-popup {
+        top: 100px;
     }
 }
 
